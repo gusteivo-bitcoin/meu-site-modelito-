@@ -1,0 +1,60 @@
+.carrossel-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carrossel-slides {
+    display: flex;
+    width: 100%;
+    animation: rolarCarrossel 16s linear infinite;
+  }
+  
+  .carrossel-slide {
+    min-width: 100%;
+    transition: transform 0.5s;
+    flex-shrink: 0;
+  }
+  
+  .carrossel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Animação para rolar as imagens */
+  @keyframes rolarCarrossel {
+    0%   { transform: translateX(0); }
+    20%  { transform: translateX(0); }
+    25%  { transform: translateX(-100%); }
+    45%  { transform: translateX(-100%); }
+    50%  { transform: translateX(-200%); }
+    70%  { transform: translateX(-200%); }
+    75%  { transform: translateX(-300%); }
+    95%  { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+  }
+  
+  /* Opcional: setas de navegação */
+  .carrossel-seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0 10px;
+  }
+  
+  .carrossel-seta.esquerda {
+    left: 10px;
+  }
+  
+  .carrossel-seta.direita {
+    right: 10px;
+  }
